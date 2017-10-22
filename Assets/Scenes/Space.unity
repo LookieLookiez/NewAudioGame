@@ -4097,6 +4097,7 @@ GameObject:
   m_Component:
   - component: {fileID: 666643768}
   - component: {fileID: 666643767}
+  - component: {fileID: 666643769}
   m_Layer: 0
   m_Name: AudioTrack
   m_TagString: Untagged
@@ -4197,6 +4198,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &666643769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 666643766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f5150b8733a9d24c87c4e98867e1bbc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 666643767}
+  audioBand:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  audioBandBuffer:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  amplitude: 0
+  amplitudeBuffer: 0
+  ampHighest: 0
 --- !u!4 &667802669 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 2756f3c6b21496c4fbe5e7a3ee6294e9, type: 3}
@@ -4490,6 +4524,50 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2756f3c6b21496c4fbe5e7a3ee6294e9, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &706497614
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 706497616}
+  - component: {fileID: 706497615}
+  m_Layer: 0
+  m_Name: GameCore
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &706497615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 706497614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87d62ebfa6b961747bc6cc9648b4e189, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blueMat: {fileID: 2100000, guid: 9bb02bf75149d564dbe5c84133ee39fe, type: 2}
+  PinkMat: {fileID: 2100000, guid: 863e2662f47a06c469cb286787b2ef4f, type: 2}
+  LeavesMat: {fileID: 2100000, guid: 52eb72faeb9eb94449d4bc6ab36e3ac6, type: 2}
+  band: 0
+--- !u!4 &706497616
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 706497614}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 41.34651, y: 13.267429, z: 1.4505994}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &720485945 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400000, guid: 2fe3eb2b73c67594da310c132a785eb8, type: 3}
@@ -13958,6 +14036,10 @@ Prefab:
     - target: {fileID: 2000000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
       propertyPath: m_ClearFlags
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
+      propertyPath: field of view
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 2}
