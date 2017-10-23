@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: d22bb6c5b50018c4c9d231195062af1a
+timeCreated: 1508717731
+licenseType: Pro
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Haze Light Demo
+  fontNames:
+  - Haze Light Demo
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
