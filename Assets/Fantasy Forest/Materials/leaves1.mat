@@ -88,7 +88,7 @@ Material:
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 0.89705884, g: 0.10553633, b: 0.74421287, a: 1}
-    - _EmissionColor: {r: 0.4580559, g: 0.05388893, b: 0.38000974, a: 0.5106197}
+    - _EmissionColor: {r: 0.60118085, g: 0.070727155, b: 0.49874824, a: 0.6701688}
     - _Scale: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _TreeInstanceColor: {r: 1, g: 1, b: 1, a: 1}
