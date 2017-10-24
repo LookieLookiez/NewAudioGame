@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: New Material 2
+  m_Name: FernLeaf
   m_Shader: {fileID: 4800000, guid: 9ee17f37709644d46a1fb32c72c9b7eb, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -66,16 +66,16 @@ Material:
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
-    - _OutlineThickness: 0.13
+    - _OutlineThickness: 0.23
     - _Parallax: 0.02
-    - _Shininess: 0.948
+    - _Shininess: 1
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.3921569, g: 0.5176471, b: 0.043137256, a: 1}
+    - _Color: {r: 0.009839975, g: 0.6691177, b: 0.068947464, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
-    - _UnlitColor: {r: 0.1137255, g: 0.23137257, b: 0.058823533, a: 1}
+    - _UnlitColor: {r: 0.03797271, g: 0.49264705, b: 0.02173442, a: 1}
