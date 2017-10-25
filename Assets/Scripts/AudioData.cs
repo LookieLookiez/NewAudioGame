@@ -21,6 +21,11 @@ public class AudioData : MonoBehaviour {
     public float amplitudeBuffer;
     public float ampHighest;
 
+    public bool recording = true;
+    public bool saved = false;
+    [HideInInspector] public List<AudioSampleSnapshot> recordedAudioData = new List<AudioSampleSnapshot>();
+    AudioExportData audioExportData = new AudioExportData();
+
     void Start ()
     {
         Instance = this; 
@@ -31,15 +36,40 @@ public class AudioData : MonoBehaviour {
     {
         if(audioSource != null)
         {
-            GetSpectrumData();
+            
             FrequencyBands();
             BandBuffer();
             CreateAudioBands();
             GetAmplitude();
         }
-        
     }
 
+    private void FixedUpdate()
+    {
+        if (recording)
+        {
+            if (audioSource != null)
+            {
+                GetSpectrumData();
+                RecordAudioData(samples);
+            }
+        }
+
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            ExportAudioData();
+        }
+
+        //if (!audioSource.isPlaying && recordedAudioData.Count > 0)
+        //{
+        //    if(saved == false)
+        //    {
+        //        saved = true;
+        //        ExportAudioData();
+        //    }
+        //}
+        
+    }
 
     ////////////////////////////////////////////////////////////////
     ////////////////////////////Functions///////////////////////////
@@ -128,5 +158,19 @@ public class AudioData : MonoBehaviour {
         amplitude = curAmp / ampHighest;
         amplitudeBuffer = curAmpBuffer / ampHighest;
 
+    }
+
+    void RecordAudioData(float[] _sample)
+    {
+        AudioSampleSnapshot newSnapshot = new AudioSampleSnapshot();
+        newSnapshot.sampleArray = _sample;
+        recordedAudioData.Add(newSnapshot);
+    }
+
+    void ExportAudioData()
+    {
+        recording = false;
+        audioExportData.audioData = recordedAudioData;
+        DataManager.Instance.SaveMovementDataList(audioExportData, "\\audioData.xml");
     }
 }
