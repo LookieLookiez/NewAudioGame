@@ -21,8 +21,8 @@ public class AudioData : MonoBehaviour {
     public float amplitudeBuffer;
     public float ampHighest;
 
-    public bool recording = true;
-    public bool saved = false;
+   // public bool recording = true;
+   // public bool saved = false;
     [HideInInspector] public List<AudioSampleSnapshot> recordedAudioData = new List<AudioSampleSnapshot>();
     AudioExportData audioExportData = new AudioExportData();
 
@@ -46,18 +46,18 @@ public class AudioData : MonoBehaviour {
 
     private void FixedUpdate()
     {
-        if (recording)
-        {
+        //if (recording)
+      //  {
             if (audioSource != null)
             {
                 GetSpectrumData();
-                RecordAudioData(samples);
+               // RecordAudioData(samples);
             }
-        }
+     //   }
 
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            ExportAudioData();
+           // ExportAudioData();
         }
 
         //if (!audioSource.isPlaying && recordedAudioData.Count > 0)
@@ -169,7 +169,7 @@ public class AudioData : MonoBehaviour {
 
     void ExportAudioData()
     {
-        recording = false;
+        //recording = false;
         audioExportData.audioData = recordedAudioData;
         DataManager.Instance.SaveMovementDataList(audioExportData, "\\audioData.xml");
     }
