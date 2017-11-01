@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GlowPulse : MonoBehaviour {
+public class GlowPulse1 : MonoBehaviour {
     public Material myMat;
 
 
@@ -14,9 +14,9 @@ public class GlowPulse : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
-            var EmisColour = new Color(myMat.color.r, myMat.color.g, myMat.color.b) * AudioData.Instance.amplitudeBuffer;
+            var EmisColour = new Color(myMat.color.r, myMat.color.g, myMat.color.b) * AudioData1.Instance.amplitudeBuffer;
             myMat.SetColor("_EmissionColor", EmisColour);
-        }
+        
+    }
     
 }

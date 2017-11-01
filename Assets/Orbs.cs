@@ -17,6 +17,7 @@ public class Orbs : MonoBehaviour {
             {
                 OrbsCollected = 4;
             }
+            Destroy(collision.gameObject);
         }
     }
 
