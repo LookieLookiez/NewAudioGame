@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour {
 
     private void Update()
     {
-        Cam.transform.rotation = mouse;
+      //  Cam.transform.rotation = mouse;
 
         if (MovementPointCount >= 98)
         {

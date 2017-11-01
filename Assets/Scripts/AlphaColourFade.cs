@@ -51,7 +51,7 @@ public class AlphaColourFade : MonoBehaviour {
             //  }
 
             IntroSlide.gameObject.GetComponent<Text>().color = tempColor;
-            print(tempColor.a);
+
         }
        
     }
@@ -69,7 +69,6 @@ public class AlphaColourFade : MonoBehaviour {
             //    }
 
             BlackFilter.color = tempColor;
-            print(tempColor.a);
         }
     }
 }
