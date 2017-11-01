@@ -10779,7 +10779,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 283420591}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e1693cdea23ae9a439883e87fe976b02, type: 3}
   m_Name: 
@@ -10886,7 +10886,8 @@ MonoBehaviour:
   - {fileID: 1953299393}
   MovementPointCount: 0
   speed: 4
-  Cam: {fileID: 0}
+  TimerActive: 0
+  InactiveTimer: 2
 --- !u!114 &283420598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34978,6 +34979,7 @@ GameObject:
   - component: {fileID: 706497617}
   - component: {fileID: 706497616}
   - component: {fileID: 706497618}
+  - component: {fileID: 706497619}
   m_Layer: 0
   m_Name: GameCore
   m_TagString: Untagged
@@ -35039,6 +35041,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneTimer: 0
+--- !u!114 &706497619
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 706497614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83ff78b378dde684b93268ed570a4912, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &706497620
 RectTransform:
   m_ObjectHideFlags: 0
