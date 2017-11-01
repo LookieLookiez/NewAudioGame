@@ -14,7 +14,7 @@ public class GlowPulse : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	/*void Update () {
         if(AudioData.Instance.amplitudeBuffer > 0.5f)
         {
             var EmisColour = new Color(blueMat.color.r, blueMat.color.g, blueMat.color.b) * AudioData.Instance.amplitudeBuffer;
@@ -33,4 +33,5 @@ public class GlowPulse : MonoBehaviour {
         }
 
     }
+    */
 }

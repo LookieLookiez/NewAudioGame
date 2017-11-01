@@ -10,7 +10,8 @@ public class PlayerMovement : MonoBehaviour {
 
     public float speed;
 
-    public GameObject Cam;
+    public bool TimerActive = false;
+    public float InactiveTimer = 8;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -32,7 +33,7 @@ public class PlayerMovement : MonoBehaviour {
         {
             MovementPointCount = 2;
         }
-
+        IsMoving();
     }
     // Update is called once per frame
     void FixedUpdate ()
@@ -52,5 +53,27 @@ public class PlayerMovement : MonoBehaviour {
     {
         float step = speed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, MovePoints[MovementPointCount].transform.position, step);
+    }
+
+    void IsMoving()
+    {
+
+        if (TimerActive == true)
+        {
+            InactiveTimer -= Time.deltaTime; 
+        }
+
+        if (InactiveTimer <= 0)
+        {
+            speed = 4;
+            TimerActive = false;
+        }
+
+        if (Input.anyKey)
+        {
+            speed = 0;
+            InactiveTimer = 8;
+            TimerActive = true;
+        }
     }
 }
