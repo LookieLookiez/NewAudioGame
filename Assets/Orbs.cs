@@ -24,10 +24,10 @@ public class Orbs : MonoBehaviour {
     void Start ()
     {
         //Makes sure audio is muted
-        AudioTrackLayers[0].volume = 0f;
-        AudioTrackLayers[1].volume = 0f;
-        AudioTrackLayers[2].volume = 0f;
-        AudioTrackLayers[3].volume = 0f;
+      //  AudioTrackLayers[0].volume = 0f;
+      ///  AudioTrackLayers[1].volume = 0f;
+      //  AudioTrackLayers[2].volume = 0f;
+     //   AudioTrackLayers[3].volume = 0f;
     }
 	
 	// Update is called once per frame
