@@ -34977,6 +34977,7 @@ GameObject:
   - component: {fileID: 706497615}
   - component: {fileID: 706497617}
   - component: {fileID: 706497616}
+  - component: {fileID: 706497618}
   m_Layer: 0
   m_Name: GameCore
   m_TagString: Untagged
@@ -35026,6 +35027,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   FrameRate: 30
+--- !u!114 &706497618
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 706497614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 405c7842245641740a7313ff947186eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneTimer: 0
 --- !u!224 &706497620
 RectTransform:
   m_ObjectHideFlags: 0
@@ -39942,7 +39955,7 @@ Prefab:
         type: 3}
     - target: {fileID: 1284684994830872, guid: fc99dd33fec648d49bd3595a6b12e5a7, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: fc99dd33fec648d49bd3595a6b12e5a7, type: 2}

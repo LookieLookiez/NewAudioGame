@@ -8,3 +8,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Space.unity
     guid: a329f8316f15eec43bef465cbeaeb65b
+  - enabled: 1
+    path: Assets/Scenes/Nature.unity
+    guid: bb3db01c15b01ca49aeae7eba8d017da
