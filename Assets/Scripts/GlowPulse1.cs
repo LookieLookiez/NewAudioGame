@@ -14,7 +14,7 @@ public class GlowPulse1 : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-            var EmisColour = new Color(myMat.color.r, myMat.color.g, myMat.color.b) * AudioData1.Instance.amplitudeBuffer;
+            var EmisColour = new Color(myMat.color.r, myMat.color.g, myMat.color.b) * (AudioData1.Instance.amplitudeBuffer * 1.5f);
             myMat.SetColor("_EmissionColor", EmisColour);
         
     }
