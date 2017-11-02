@@ -32,20 +32,7 @@ public class PlayerMovement : MonoBehaviour {
         //  Cam.transform.rotation = mouse;
         
 
-        if (Application.loadedLevelName == "Space")
-        {
-            if (MovementPointCount >= 98)
-            {
-                MovementPointCount = 2;
-            }
-        }
-        if (Application.loadedLevelName == "Nature")
-        {
-            if (MovementPointCount >= 59)
-            {
-                MovementPointCount = 10;
-            }
-        }
+        
 
 
 
@@ -60,6 +47,24 @@ public class PlayerMovement : MonoBehaviour {
 
     void Movement()
     {
+        if (Application.loadedLevelName == "Space")
+        {
+            print("space");
+            if (MovementPointCount >= 98)
+            {
+                MovementPointCount = 2;
+            }
+        }
+
+        if (Application.loadedLevelName == "Nature")
+        {
+            print("nature");
+            if (MovementPointCount >= 56)
+            {
+                MovementPointCount = 8;
+            }
+        }
+
         float step = speed * Time.deltaTime;
         transform.position = Vector3.MoveTowards(transform.position, MovePoints[MovementPointCount].transform.position, step);
     }
