@@ -9,12 +9,18 @@ public class SceneController : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
-		
-	}
+        
+    }
 	
 	// Update is called once per frame
 	void Update ()
     {
+        if (Application.loadedLevelName == "Menu")
+        {
+            Screen.lockCursor = false;
+            Cursor.visible = true;
+        }
+
 		if(Input.GetKeyDown(KeyCode.Z))
         {
             if (Application.loadedLevelName == "Menu")
@@ -24,11 +30,13 @@ public class SceneController : MonoBehaviour {
 
             if (Application.loadedLevelName == "Space")
             {
+                Cursor.visible = true;
                 Application.LoadLevel("Menu");
             }
 
             if (Application.loadedLevelName == "Nature")
             {
+                Cursor.visible = true;
                 Application.LoadLevel("Menu");
             }
         }
@@ -48,5 +56,6 @@ public class SceneController : MonoBehaviour {
     {
         Application.OpenURL(SoundCloudURL);
     }
+
 
 }
