@@ -6,7 +6,7 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Orange
+  m_Name: MushroomBefore
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _EMISSION
   m_LightmapFlags: 1
@@ -72,5 +72,5 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 1, g: 0.52156866, b: 0.21176471, a: 1}
-    - _EmissionColor: {r: 1.1907759, g: 0.6210714, b: 0.2521643, a: 1.1907759}
+    - _Color: {r: 0.5661765, g: 0.5661765, b: 0.5661765, a: 1}
+    - _EmissionColor: {r: 0.16176468, g: 0.16176468, b: 0.16176468, a: 0.71304524}
