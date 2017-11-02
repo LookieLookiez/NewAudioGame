@@ -11135,6 +11135,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feb49b6eb8d097a48b6f50638482e044, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  beam2: {fileID: 0}
+  beam3: {fileID: 0}
+  beam4: {fileID: 0}
   AudioTrackLayers:
   - {fileID: 812916341}
   - {fileID: 520713594}
@@ -82337,6 +82340,26 @@ Prefab:
     - target: {fileID: 1316371075563494, guid: 2cf3f13776e385a4c8ac716479735a62, type: 2}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 114670246919532596, guid: 2cf3f13776e385a4c8ac716479735a62,
+        type: 2}
+      propertyPath: m_WalkSpeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114670246919532596, guid: 2cf3f13776e385a4c8ac716479735a62,
+        type: 2}
+      propertyPath: m_RunSpeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114670246919532596, guid: 2cf3f13776e385a4c8ac716479735a62,
+        type: 2}
+      propertyPath: m_JumpSpeed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114144706920738920, guid: 2cf3f13776e385a4c8ac716479735a62,
+        type: 2}
+      propertyPath: chromaticAberration
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2cf3f13776e385a4c8ac716479735a62, type: 2}
