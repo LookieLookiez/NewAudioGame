@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Orbs : MonoBehaviour {
+    public GameObject beam2;
+    public GameObject beam3;
+    public GameObject beam4;
 
     //Audio
     public AudioSource[] AudioTrackLayers;
@@ -44,12 +47,17 @@ public class Orbs : MonoBehaviour {
         if (OrbsCollected >= 1)
         {
             AudioTrackLayers[1].volume = 1f;
+            beam2.SetActive(true);
+
             if (OrbsCollected >= 2)
             {
                 AudioTrackLayers[2].volume = 1f;
+                beam3.SetActive(true);
+
                 if (OrbsCollected >= 3)
                 {
                     AudioTrackLayers[3].volume = 1f;
+                    beam4.SetActive(true);
                 }                
             }
         }
