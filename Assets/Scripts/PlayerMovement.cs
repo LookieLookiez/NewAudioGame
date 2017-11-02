@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class PlayerMovement : MonoBehaviour {
 
@@ -21,32 +22,40 @@ public class PlayerMovement : MonoBehaviour {
     // Use this for initialization
     void Start () 
     {
-		
-	}
+       
+        
+    }
 
 
     private void Update()
     {
-      //  Cam.transform.rotation = mouse;
+        //  Cam.transform.rotation = mouse;
+        
 
-        if (MovementPointCount >= 98)
+        if (Application.loadedLevelName == "Space")
         {
-            MovementPointCount = 2;
+            if (MovementPointCount >= 98)
+            {
+                MovementPointCount = 2;
+            }
         }
-        IsMoving();
+        if (Application.loadedLevelName == "Nature")
+        {
+            if (MovementPointCount >= 59)
+            {
+                MovementPointCount = 10;
+            }
+        }
+
+
+
     }
     // Update is called once per frame
     void FixedUpdate ()
     {
+
         Movement();
-
-        if(MovementPointCount >= 99)
-        {
-            MovementPointCount = 2;
-        }
-
-        
-
+        IsMoving();
     }
 
     void Movement()

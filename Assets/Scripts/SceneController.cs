@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class SceneController : MonoBehaviour {
 
-	// Use this for initialization
-	void Start ()
+    public string SoundCloudURL;
+
+    // Use this for initialization
+    void Start ()
     {
 		
 	}
@@ -13,7 +15,7 @@ public class SceneController : MonoBehaviour {
 	// Update is called once per frame
 	void Update ()
     {
-		if(Input.GetKeyDown(KeyCode.Escape))
+		if(Input.GetKeyDown(KeyCode.Z))
         {
             if (Application.loadedLevelName == "Menu")
             {
@@ -41,4 +43,10 @@ public class SceneController : MonoBehaviour {
     {
         Application.LoadLevel("Nature");
     }
+
+    public void URL()
+    {
+        Application.OpenURL(SoundCloudURL);
+    }
+
 }
