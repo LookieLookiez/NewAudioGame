@@ -19,12 +19,12 @@ public class RingPulse : MonoBehaviour {
         rings1.transform.localScale = scale;
 
         var scale2 = new Vector3(AudioData1.Instance.amplitudeBuffer, 1, AudioData1.Instance.amplitudeBuffer);
-        rings2.transform.localScale = scale;
+        rings2.transform.localScale = scale2;
 
         var scale3 = new Vector3(AudioData2.Instance.amplitudeBuffer, 1, AudioData2.Instance.amplitudeBuffer);
-        rings3.transform.localScale = scale;
+        rings3.transform.localScale = scale3;
 
         var scale4 = new Vector3(AudioData3.Instance.amplitudeBuffer, 1, AudioData3.Instance.amplitudeBuffer);
-        rings4.transform.localScale = scale;
+        rings4.transform.localScale = scale4;
     }
 }
