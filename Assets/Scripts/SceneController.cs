@@ -21,7 +21,7 @@ public class SceneController : MonoBehaviour {
             Cursor.visible = true;
         }
 
-		if(Input.GetKeyDown(KeyCode.Z))
+		if(Input.GetKeyDown(KeyCode.Escape))
         {
             if (Application.loadedLevelName == "Menu")
             {

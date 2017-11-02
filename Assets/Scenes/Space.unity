@@ -18820,6 +18820,8 @@ MonoBehaviour:
   IntroSlide: {fileID: 769344753}
   HideTitleCard: 0
   HideBlackBackground: 0
+  SceneTimer: 0
+  FadeAway: 0
 --- !u!114 &706497617
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18850,7 +18852,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 706497614}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 83ff78b378dde684b93268ed570a4912, type: 3}
   m_Name: 
@@ -28146,7 +28148,7 @@ Terrain:
   m_DetailObjectDistance: 250
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
-  m_SplatMapDistance: 1000
+  m_SplatMapDistance: 1885
   m_HeightmapMaximumLOD: 0
   m_CastShadows: 1
   m_DrawHeightmap: 1

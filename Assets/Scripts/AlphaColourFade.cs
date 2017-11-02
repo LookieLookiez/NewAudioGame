@@ -11,6 +11,9 @@ public class AlphaColourFade : MonoBehaviour {
     public bool HideTitleCard;
     public bool HideBlackBackground;
 
+    public float SceneTimer;
+    public bool FadeAway;
+
     // Use this for initialization
     void Start () {
 
@@ -19,13 +22,25 @@ public class AlphaColourFade : MonoBehaviour {
         IntroSlide.SetActive(true);
         Invoke("BlackBackgroundBool", 2f);
         Invoke("TitleBool", 7.5f);
+
+        if (Application.loadedLevelName == "Space")
+        {
+            SceneTimer = 242.4f;
+        }
+        if (Application.loadedLevelName == "Nature")
+        {
+            SceneTimer = 285.2f;
+        }
     }
 	
 	// Update is called once per frame
 	void FixedUpdate ()
     {
         HideTitle();
+
         BlackFadeIn();
+
+        SceneTimer -= Time.deltaTime;
     }
 
     void BlackBackgroundBool()
@@ -58,11 +73,27 @@ public class AlphaColourFade : MonoBehaviour {
 
     void BlackFadeIn()
     {
+        var tempColor = BlackFilter.color;
+
         if (HideBlackBackground == true)
         {
-            var tempColor = BlackFilter.color;
-
             tempColor.a -= .25f * Time.deltaTime;
+            //  if (tempColor.a <= 0f)
+            //   {
+            //        tempColor.a = 0f;
+            //    }
+
+            BlackFilter.color = tempColor;
+
+            if(SceneTimer <= 5)
+            {
+                HideBlackBackground = false;
+            }
+        }
+
+        if(HideBlackBackground == false)
+        {
+            tempColor.a += .25f * Time.deltaTime;
             //  if (tempColor.a <= 0f)
             //   {
             //        tempColor.a = 0f;
@@ -71,4 +102,28 @@ public class AlphaColourFade : MonoBehaviour {
             BlackFilter.color = tempColor;
         }
     }
+    /*
+    void ExitSceneBool()
+    {
+        HideBlackBackground = false;
+        FadeAway = true;
+        
+    }
+
+    void ExitScene()
+    {
+        if (FadeAway == true)
+        {
+            var tempColor = BlackFilter.color;
+
+            tempColor.a += .25f * Time.deltaTime;
+            //  if (tempColor.a <= 0f)
+            //   {
+            //        tempColor.a = 0f;
+            //    }
+
+            BlackFilter.color = tempColor;
+        }
+    }
+    */
 }

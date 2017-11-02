@@ -15,7 +15,7 @@ public class WorldTimer : MonoBehaviour {
         }
         if (Application.loadedLevelName == "Nature")
         {
-            SceneTimer = 265.2f;
+            SceneTimer = 285.2f;
         }
     }
 	
